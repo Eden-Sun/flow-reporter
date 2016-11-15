@@ -2,7 +2,7 @@ var chalk = require('chalk')
 var path = require('path')
 
 var whitespace = start => ' '.repeat(start)
-var carets = (start, end) => '^'.repeat((end - start) + 1)
+var carets = (start, end) => '^'.repeat(end > start ? end - start + 1 : 1)
 
 module.exports = function (output) {
   output.forEach(error => {
