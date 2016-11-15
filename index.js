@@ -1,9 +1,8 @@
 var chalk = require('chalk')
 var path = require('path')
-var _ = require('underscore')
 
-var whitespace = start => _.times(start, () => ' ').join('')
-var carets = (start, end) => _.times((end - start) + 1, () => '^').join('')
+var whitespace = start => ' '.repeat(start)
+var carets = (start, end) => '^'.repeat((end - start) + 1)
 
 module.exports = function (output) {
   output.forEach(error => {
